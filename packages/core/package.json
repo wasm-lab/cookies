@@ -1,6 +1,6 @@
 {
     "name": "@wasm-lab/core",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "private": true,
     "main": "./dist/index.mjs",
     "types": "./dist/index.d.mts",
@@ -11,8 +11,8 @@
         }
     },
     "scripts": {
-        "dev": "tsup src/index.ts --format esm --dts --watch",
-        "build": "tsup src/index.ts --format esm --dts",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "build": "tsup src/index.ts --format cjs,esm --dts",
         "lint": "eslint . --max-warnings 0",
         "check-types": "tsc --noEmit"
     },
