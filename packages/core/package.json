@@ -19,6 +19,8 @@
     "devDependencies": {
         "eslint": "^9.25.0",
         "tsup": "^8.4.0",
-        "typescript": "5.8.2"
+        "typescript": "5.8.2",
+        "@wasm-lab/typescript-config": "*",
+        "@wasm-lab/eslint-config": "*"
     }
 }
