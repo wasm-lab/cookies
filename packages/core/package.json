@@ -1,8 +1,12 @@
 {
     "name": "@wasm-lab/core",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": "./dist/index.mjs",
     "types": "./dist/index.d.mts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wasm-lab/cookies/tree/main/packages/core"
+    },
     "exports": {
         ".": {
             "import": "./dist/index.mjs",
