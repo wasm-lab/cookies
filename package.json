@@ -1,5 +1,5 @@
 {
-    "name": "@wasm-lab",
+    "name": "cookies",
     "private": true,
     "scripts": {
         "build": "turbo run build",
