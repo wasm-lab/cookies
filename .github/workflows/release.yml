@@ -20,17 +20,16 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: 18
-                  cache: 'pnpm'
 
             - name: Install dependencies
-              run: pnpm install
+              run: npm install
 
             - name: Build with Turbopack
-              run: pnpm turbo build
+              run: npx turbo build
 
             - name: Create Release Pull Request or Publish
               uses: changesets/action@v1
               with:
-                  publish: pnpm release
+                  publish: npm run publish-packages
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
