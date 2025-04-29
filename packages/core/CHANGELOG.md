@@ -1,5 +1,12 @@
 # @wasm-lab/core
 
+## 2.1.0
+
+### Minor Changes
+
+- 99bb308: link github repo to package
+- a041540: Test
+
 ## 2.0.0
 
 ### Major Changes
