@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 2.1.1
+
+### Patch Changes
+
+- b119d9c: Testing CI
+
 ## 2.1.0
 
 ### Minor Changes
