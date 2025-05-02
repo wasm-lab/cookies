@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if any files were changed in src/ (adjust as needed)
+if git diff --cached --name-only --quiet "src/**" || [ "$?" -eq 1 ]; then
+  echo "No source files changed, skipping changeset check"
+else
+  echo "Checking for changeset..."
+  if [ ! -f .changeset/*.md ]; then
+    echo "ERROR: No changeset found for your changes!"
+    echo "Please run: npx changeset"
+    exit 1
+  fi
+fi

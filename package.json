@@ -1,27 +1,30 @@
 {
-    "name": "cookies",
-    "private": true,
-    "scripts": {
-        "build": "turbo run build",
-        "dev": "turbo run dev",
-        "lint": "turbo run lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "check-types": "turbo run check-types",
-        "create-release": "changeset",
-        "publish-packages": "turbo run build lint && changeset version && changeset publish"
-    },
-    "devDependencies": {
-        "prettier": "^3.5.3",
-        "turbo": "^2.5.2",
-        "typescript": "5.8.2",
-        "@changesets/cli": "^2.29.2"
-    },
-    "engines": {
-        "node": ">=18"
-    },
-    "packageManager": "npm@10.9.2",
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-    ]
+  "name": "cookies",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "create-release": "changeset",
+    "publish-packages": "turbo run build lint && changeset version && changeset publish",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.2",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.2",
+    "typescript": "5.8.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
