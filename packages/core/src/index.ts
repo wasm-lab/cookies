@@ -71,7 +71,7 @@ export interface CookieOptions {
  * Safely retrieves `document.cookie`, returning an empty string in non-browser environments.
  * @returns The cookie string or an empty string.
  */
-function safeDocumentCookie(): string {
+function getSafeDocumentCookie(): string {
     if (typeof document === 'undefined') {
         console.warn('[cookies-core] Attempted to access document.cookie in non-browser environment');
         return '';
@@ -197,7 +197,7 @@ function getCookie<T = unknown>(name: string, options: { raw?: boolean } = {}): 
  * @returns A record of all cookies.
  */
 function getAllCookies<T = unknown>(options: { raw?: boolean } = {}): Record<string, T> {
-    const documentCookie = safeDocumentCookie();
+    const documentCookie = getSafeDocumentCookie();
 
     const cookies = documentCookie ? documentCookie.split('; ') : [];
 
