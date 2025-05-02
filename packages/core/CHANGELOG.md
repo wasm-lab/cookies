@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 2.1.4
+
+### Patch Changes
+
+- [`bf1ecf1`](https://github.com/wasm-lab/cookies/commit/bf1ecf10669a121db7200a1ffc1cf33f0a4453eb) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - Update tsconfig settings to optimize build output
+
 ## 2.1.3
 
 ### Patch Changes
