@@ -1,14 +1,20 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
-# Check if any files were changed in src/ (adjust as needed)
-if git diff --cached --name-only --quiet "src/**" || [ "$?" -eq 1 ]; then
-  echo "No source files changed, skipping changeset check"
-else
-  echo "Checking for changeset..."
-  if [ ! -f .changeset/*.md ]; then
-    echo "ERROR: No changeset found for your changes!"
-    echo "Please run: npx changeset"
-    exit 1
+# Ignore changes to non-code files
+CHANGED_CODE=$(git diff --cached --name-only \
+  -- 'packages/**' '!*.md' '!*.json' '!*.config.*')
+
+if [ -n "$CHANGED_CODE" ]; then
+
+  # Check for recent changeset
+  if [ -z "$(find .changeset -name '*.md' -mmin -30)" ]; then
+    echo "Code changes detected but no changeset found!"
+    echo "Choose:"
+    echo "1) Create changeset (run npx changeset)"
+    echo "2) Commit anyway (not recommended)"
+    read -p "Your choice [1/2]: " choice
+    
+    if [ "$choice" != "2" ]; then
+      exit 1
+    fi
   fi
 fi
