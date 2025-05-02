@@ -91,11 +91,11 @@ function validateCookieValue(value: unknown): void {
 }
 /**
  * Validates cookie configuration and warns about potential issues in development.
+ * @param cookieString - The complete cookie string to be set
  * @param name - The name of the cookie
  * @param options - Cookie configuration options
- * @param cookieString - The complete cookie string to be set
  */
-function validateCookieConfiguration(name: string, options: CookieOptions, cookieString: string): void {
+function validateCookieConfiguration(cookieString: string, name: string, options: CookieOptions): void {
     if (!__DEV__) return;
 
     if (name.startsWith('__Host-')) {
@@ -164,7 +164,7 @@ function setCookie<T>(name: string, value: T, options: CookieOptions = {}): void
 
     const cookieString = parts.join('; ');
 
-    validateCookieConfiguration(name, options, cookieString);
+    validateCookieConfiguration(cookieString, name, options);
 
     document.cookie = cookieString;
 }
