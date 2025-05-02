@@ -1,8 +1,19 @@
 import { decodeCookieValue, encodeCookieValue } from './utils';
 
+/**
+ * Indicates whether the current environment is in development mode.
+ */
 const __DEV__ = typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'production';
 
+/**
+ * Maximum cookie size in bytes.
+ *  - 4KB in most other browsers
+ */
 const MAX_COOKIE_SIZE = 4096;
+
+/**
+ * Regular expression to match reserved characters in cookie names.
+ */
 const RESERVED_CHARS_REGEX = /[()<>@,;:\\"[\]?={} \t]/g;
 
 /**
