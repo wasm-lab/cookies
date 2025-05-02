@@ -151,7 +151,7 @@ function setCookie<T>(name: string, value: T, options: CookieOptions = {}): void
         const expires =
             options.expires instanceof Date ? options.expires : new Date(Date.now() + options.expires * multiplier);
 
-        parts.push(`Expires=${expires.toUTCString()}`);
+        parts.push(`Expires=${expires.toString()}`);
     }
 
     if (options.secure || options.sameSite === 'None') {
