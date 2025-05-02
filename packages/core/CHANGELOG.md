@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 2.1.3
+
+### Patch Changes
+
+- [`02ef272`](https://github.com/wasm-lab/cookies/commit/02ef27268c7ca3c2e58c11c11050b9f451e7dd8d) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - rename safeDocumentCookie to getSafeDocumentCookie for clarity
+
 ## 2.1.2
 
 ### Patch Changes
