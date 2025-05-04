@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 0.0.4
+
+### Patch Changes
+
+- [`79d3481`](https://github.com/wasm-lab/cookies/commit/79d34813da4f45868dff1fbfe8d74bc36ef610bf) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - add ora and chalk and semver to devDependencies
+
 ## 0.0.3
 
 ### Patch Changes
