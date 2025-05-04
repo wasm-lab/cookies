@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 0.0.2
+
+### Patch Changes
+
+- [`16d96fa`](https://github.com/wasm-lab/cookies/commit/16d96fa4ed7a9ee1981cf5c0e5e79e6577d8de56) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - First release of a POC
+
 ## 2.1.4
 
 ### Patch Changes
