@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 0.0.5
+
+### Patch Changes
+
+- [`052605d`](https://github.com/wasm-lab/cookies/commit/052605dd83d951c70d37c416189e9e366e741e88) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - trying to fix an issue with missing pkgs
+
 ## 0.0.4
 
 ### Patch Changes
