@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 0.0.3
+
+### Patch Changes
+
+- [`2749079`](https://github.com/wasm-lab/cookies/commit/27490790f1271ed6f4e98348beda03397fdb8ed0) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - increase max warnings limit in lint script
+
 ## 0.0.2
 
 ### Patch Changes
