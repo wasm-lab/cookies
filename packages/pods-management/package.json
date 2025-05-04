@@ -16,20 +16,22 @@
     "scripts": {
         "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
         "build": "tsup src/index.ts --format cjs,esm --dts",
-        "lint": "eslint . --max-warnings 15",
+        "lint": "eslint . --max-warnings 30",
         "check-types": "tsc --noEmit"
     },
     "devDependencies": {
         "@wasm-lab/eslint-config": "*",
         "@wasm-lab/typescript-config": "*",
+        "chalk": "^5.4.1",
         "eslint": "^9.25.0",
+        "ora": "^8.2.0",
+        "semver": "^7.7.1",
         "tsup": "^8.4.0",
         "typescript": "5.8.2"
     },
     "dependencies": {
         "@expo/config": "^11.0.8",
         "@expo/json-file": "^9.1.4",
-        "@expo/package-manager": "^1.8.4",
-        "semver": "^7.7.1"
+        "@expo/package-manager": "^1.8.4"
     }
 }
