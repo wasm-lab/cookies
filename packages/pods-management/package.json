@@ -20,11 +20,16 @@
         "check-types": "tsc --noEmit"
     },
     "devDependencies": {
+        "@types/semver": "^7.7.0",
         "@wasm-lab/eslint-config": "*",
         "@wasm-lab/typescript-config": "*",
         "chalk": "^5.4.1",
+        "child_process": "^1.0.2",
         "eslint": "^9.25.0",
+        "fs": "^0.0.1-security",
         "ora": "^8.2.0",
+        "path": "^0.12.7",
+        "resolve-from": "^5.0.0",
         "semver": "^7.7.1",
         "tsup": "^8.4.0",
         "typescript": "5.8.2"
