@@ -181,5 +181,3 @@ async function promptToInstallPodsAsync(projectRoot: string, missingPods?: strin
         throw error;
     }
 }
-
-maybePromptToSyncPodsAsync(path.join(__dirname, '..'));
