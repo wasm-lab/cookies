@@ -57,8 +57,9 @@ export async function hasPackageJsonDependencyListChangedAsync(projectRoot: stri
     // Cache package.json
     await ensureDirectoryAsync(getTempPrebuildFolder(projectRoot));
     const templateDirectory = path.join(getTempPrebuildFolder(projectRoot), CACHED_PACKAGE_JSON);
-    await JsonFile.writeAsync(templateDirectory, packages);
-
+    try {
+        await JsonFile.writeAsync(templateDirectory, packages);
+    } catch {}
     return hasNewDependencies;
 }
 

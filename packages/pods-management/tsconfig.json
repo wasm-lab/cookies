@@ -1,7 +1,10 @@
 {
   "extends": "@wasm-lab/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib": ["es2022"],
+    "module": "CommonJS",
+    "moduleResolution": "Node"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

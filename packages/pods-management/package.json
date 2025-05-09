@@ -3,6 +3,12 @@
     "version": "0.0.5",
     "main": "./dist/index.mjs",
     "types": "./dist/index.d.mts",
+    "scripts": {
+        "dev": "tsup src/index.ts --format cjs --dts --watch",
+        "build": "tsup src/index.ts --format cjs --dts",
+        "lint": "eslint . --max-warnings 30",
+        "check-types": "tsc --noEmit"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/wasm-lab/cookies/tree/main/packages/pods-management"
@@ -13,11 +19,8 @@
             "types": "./dist/index.d.mts"
         }
     },
-    "scripts": {
-        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
-        "build": "tsup src/index.ts --format cjs,esm --dts",
-        "lint": "eslint . --max-warnings 30",
-        "check-types": "tsc --noEmit"
+    "bin": {
+        "rn-pods": "./dist/index.mjs"
     },
     "devDependencies": {
         "@types/semver": "^7.7.0",
@@ -26,17 +29,15 @@
         "chalk": "^5.4.1",
         "child_process": "^1.0.2",
         "eslint": "^9.25.0",
-        "fs": "^0.0.1-security",
         "ora": "^8.2.0",
-        "path": "^0.12.7",
         "resolve-from": "^5.0.0",
         "semver": "^7.7.1",
         "tsup": "^8.4.0",
-        "typescript": "5.8.2"
+        "typescript": "5.8.2",
+        "@expo/json-file": "^9.1.4"
     },
     "dependencies": {
         "@expo/config": "^11.0.8",
-        "@expo/json-file": "^9.1.4",
         "@expo/package-manager": "^1.8.4"
     }
 }
