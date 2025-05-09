@@ -1,5 +1,11 @@
 # @wasm-lab/core
 
+## 0.1.0
+
+### Minor Changes
+
+- [`a8f7c2b`](https://github.com/wasm-lab/cookies/commit/a8f7c2b89797b86c3c3074adf03920beda99c78f) Thanks [@karam1ashqar](https://github.com/karam1ashqar)! - add bin entry
+
 ## 0.0.5
 
 ### Patch Changes
